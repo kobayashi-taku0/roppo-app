@@ -1791,13 +1791,14 @@ export default function RoppoApp() {
                       {"\u7b2c"}
                     </span>
                     <input ref={inpRef} type="text" inputMode="numeric" value={inp}
-                      placeholder={"\u6761\u6587\u756a\u53f7\uff08\u4f8b: 709\uff09"}
+                      placeholder={"\u6761\u6587\u756a\u53f7\uff08\u4f8b: 1\uff09"}
                       onChange={function(e) { setInp(e.target.value); }}
                       onKeyDown={function(e) {
                         if (e.key === "Enter") doSearch(law, inp);
                       }}
                       style={{ flex:1, padding:"12px 4px", fontSize:17,
-                        letterSpacing:".06em", minWidth:0 }} />
+                        letterSpacing:".06em", minWidth:0,
+                        fontFamily:"Shippori Mincho,Noto Serif JP,Georgia,serif" }} />
                     <span style={{ color:G, fontSize:14, flexShrink:0 }}>
                       {"\u6761"}
                     </span>
@@ -1822,7 +1823,8 @@ export default function RoppoApp() {
                     <input type="text" value={kw}
                       placeholder={"\u30ad\u30fc\u30ef\u30fc\u30c9\u691c\u7d22\uff08\u4fe1\u7fa9\u5247\u3001\u9519\u8aa4\u306a\u3069\uff09"}
                       onChange={function(e) { setKw(e.target.value); }}
-                      style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0 }} />
+                      style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0,
+                        fontFamily:"Shippori Mincho,Noto Serif JP,Georgia,serif" }} />
                     {kw && (
                       <button className="rl-btn" onClick={function() { setKw(""); }}
                         style={{ color:"#7a6a60", fontSize:13 }}>{"×"}</button>
