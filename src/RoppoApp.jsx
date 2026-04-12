@@ -1794,6 +1794,10 @@ export default function RoppoApp() {
                     </span>
                   </div>
 
+                  <div style={{ fontSize:11, color:"#8a7a60",
+                    marginBottom:4, letterSpacing:".1em" }}>
+                    {"\u6761\u6587\u756a\u53f7"}
+                  </div>
                   <div style={{ display:"flex", alignItems:"center", gap:6,
                     background:"rgba(8,6,3,.8)", border:"1px solid rgba(180,140,80,.32)",
                     borderRadius:8, padding:"0 12px", marginBottom:8 }}>
@@ -1801,14 +1805,12 @@ export default function RoppoApp() {
                       {"\u7b2c"}
                     </span>
                     <input ref={inpRef} type="text" inputMode="numeric" value={inp}
-                      placeholder={""}
                       onChange={function(e) { setInp(e.target.value); }}
                       onKeyDown={function(e) {
                         if (e.key === "Enter") doSearch(law, inp);
                       }}
                       style={{ flex:1, padding:"12px 4px", fontSize:17,
-                        letterSpacing:".06em", minWidth:0,
-                        fontFamily:"JaMincho,MS PMincho,MS P\u660e\u671d,MS Mincho,MS \u660e\u671d,Hiragino Mincho ProN,Hiragino Mincho Pro,Yu Mincho,YuMincho,Georgia,serif" }} />
+                        letterSpacing:".06em", minWidth:0 }} />
                     <span style={{ color:G, fontSize:14, flexShrink:0 }}>
                       {"\u6761"}
                     </span>
@@ -1826,15 +1828,17 @@ export default function RoppoApp() {
                     {"\u691c\u7d22\u3059\u308b"}
                   </button>
 
+                  <div style={{ fontSize:11, color:"#8a7a60",
+                    marginBottom:4, letterSpacing:".1em" }}>
+                    {"\u30ad\u30fc\u30ef\u30fc\u30c9\u691c\u7d22"}
+                  </div>
                   <div style={{ display:"flex", alignItems:"center", gap:6,
                     background:"rgba(8,6,3,.7)", border:"1px solid rgba(180,140,80,.2)",
                     borderRadius:8, padding:"0 12px", marginBottom:10 }}>
-                    <span style={{ color:"#8a7a60", fontSize:13, flexShrink:0 }}>{"kw"}</span>
+                    <span style={{ color:"#8a7a60", fontSize:13, flexShrink:0 }}>{"🔍"}</span>
                     <input type="text" value={kw}
-                      placeholder={""}
                       onChange={function(e) { setKw(e.target.value); }}
-                      style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0,
-                        fontFamily:"JaMincho,MS PMincho,MS P\u660e\u671d,MS Mincho,MS \u660e\u671d,Hiragino Mincho ProN,Hiragino Mincho Pro,Yu Mincho,YuMincho,Georgia,serif" }} />
+                      style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0 }} />
                     {kw && (
                       <button className="rl-btn" onClick={function() { setKw(""); }}
                         style={{ color:"#7a6a60", fontSize:13 }}>{"×"}</button>
