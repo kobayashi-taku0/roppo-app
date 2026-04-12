@@ -1169,9 +1169,11 @@ var APP_CSS_PARTS = [
     "src:local('MS PMincho'),local('MS P明朝')," +
     "local('MS Mincho'),local('MS 明朝')," +
     "local('Hiragino Mincho ProN'),local('Hiragino Mincho Pro')," +
-    "local('Yu Mincho'),local('YuMincho');}" ,
+    "local('Yu Mincho'),local('YuMincho');" +
+    "unicode-range:U+3000-9FFF,U+F900-FAFF,U+FF00-FFEF;}" ,
   "*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}",
-  "body{font-family:JaMincho,'MS PMincho','MS P明朝','MS Mincho','MS 明朝','Hiragino Mincho ProN','Hiragino Mincho Pro','Yu Mincho',YuMincho,Georgia,serif;}",
+  "body{font-family:JaMincho,'MS PMincho','MS P明朝','MS Mincho','MS 明朝','Hiragino Mincho ProN','Hiragino Mincho Pro','Yu Mincho',YuMincho,Georgia,serif;}" +
+  ":lang(ja){font-family:JaMincho,'MS PMincho','MS P明朝','MS Mincho','MS 明朝','Hiragino Mincho ProN','Hiragino Mincho Pro','Yu Mincho',YuMincho,Georgia,serif!important;}",
   "::-webkit-scrollbar{width:5px}",
   "::-webkit-scrollbar-track{background:#161208}",
   "::-webkit-scrollbar-thumb{background:#3a2c14;border-radius:3px}",
