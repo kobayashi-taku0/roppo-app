@@ -1166,9 +1166,10 @@ function getArticleList(lawId) {
 /* ===== CSS injection ===== */
 var APP_CSS_PARTS = [
   "@import url(https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700;800" +
+    "&family=Noto+Serif+JP:wght@400;600;700" +
     "&family=Zen+Antique&display=swap);",
   "*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}",
-  "body{font-family:'Shippori Mincho','Noto Serif JP',Georgia,serif;}",
+  "body{font-family:'Shippori Mincho','Noto Serif JP','Yu Mincho','YuMincho',Georgia,serif;}",
   "::-webkit-scrollbar{width:5px}",
   "::-webkit-scrollbar-track{background:#161208}",
   "::-webkit-scrollbar-thumb{background:#3a2c14;border-radius:3px}",
@@ -1185,7 +1186,7 @@ var APP_CSS_PARTS = [
   ".rl-row:hover{background:rgba(180,140,80,.07)!important;}",
   ".rl-tab{cursor:pointer;border:none;transition:all .15s;font-family:inherit;}",
   "input,textarea{background:transparent;border:none;outline:none;" +
-    "font-family:inherit;color:#e8e0d0;width:100%;}",
+    "font-family:'Shippori Mincho','Noto Serif JP','Yu Mincho','YuMincho',Georgia,serif;color:#e8e0d0;width:100%;}",
   "@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}",
   ".fade{animation:fadein .28s ease forwards;}",
   "@media(max-width:600px){.hd-sub{display:none}}"
@@ -1560,7 +1561,7 @@ export default function RoppoApp() {
   /* render */
   return (
     <div style={{ minHeight:"100vh", background:"#0c0a07", color:"#e8e0d0",
-      fontFamily:"Shippori Mincho,Noto Serif JP,Georgia,serif" }}>
+      fontFamily:"Shippori Mincho,Noto Serif JP,Yu Mincho,YuMincho,Georgia,serif" }}>
 
       <header style={{ position:"sticky", top:0, zIndex:200,
         background:"rgba(12,10,7,.97)", borderBottom:"1px solid rgba(180,140,80,.2)",
@@ -1798,7 +1799,7 @@ export default function RoppoApp() {
                       }}
                       style={{ flex:1, padding:"12px 4px", fontSize:17,
                         letterSpacing:".06em", minWidth:0,
-                        fontFamily:"Shippori Mincho,Noto Serif JP,Georgia,serif" }} />
+                        fontFamily:"Shippori Mincho,Noto Serif JP,Yu Mincho,YuMincho,Georgia,serif" }} />
                     <span style={{ color:G, fontSize:14, flexShrink:0 }}>
                       {"\u6761"}
                     </span>
@@ -1824,7 +1825,7 @@ export default function RoppoApp() {
                       placeholder={"\u30ad\u30fc\u30ef\u30fc\u30c9\u691c\u7d22\uff08\u4fe1\u7fa9\u5247\u3001\u9519\u8aa4\u306a\u3069\uff09"}
                       onChange={function(e) { setKw(e.target.value); }}
                       style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0,
-                        fontFamily:"Shippori Mincho,Noto Serif JP,Georgia,serif" }} />
+                        fontFamily:"Shippori Mincho,Noto Serif JP,Yu Mincho,YuMincho,Georgia,serif" }} />
                     {kw && (
                       <button className="rl-btn" onClick={function() { setKw(""); }}
                         style={{ color:"#7a6a60", fontSize:13 }}>{"×"}</button>
