@@ -2627,6 +2627,37 @@ export default function RoppoApp() {
 
         </div>
       </div>
+
+      {/* footer */}
+      <footer style={{ borderTop:"1px solid rgba(180,140,80,.12)",
+        background:"rgba(8,6,4,.8)", padding:"20px 14px", marginTop:8 }}>
+        <div style={{ maxWidth:1100, margin:"0 auto" }}>
+          <div style={{ fontSize:11, color:"#4a3a22", lineHeight:1.9, marginBottom:10 }}>
+            <div style={{ fontWeight:700, color:"#6a5a40", marginBottom:4 }}>
+              {"免責事項"}
+            </div>
+            <div>
+              {"本アプリは学習目的の参考情報を提供するものです。条文・解説の正確性・完全性・最新性を保証するものではありません。"}
+            </div>
+            <div>
+              {"法改正等により実際の条文と異なる場合があります。法律上の判断が必要な場合は必ず弁護士・司法書士・行政書士等の有資格専門家にご相談ください。"}
+            </div>
+            <div>
+              {"条文テキストの出典：e-Gov法令検索（https://laws.e-gov.go.jp）。法令の条文は著作権法第13条により著作権の目的となりません。"}
+            </div>
+          </div>
+          <div style={{ display:"flex", justifyContent:"space-between",
+            alignItems:"center", flexWrap:"wrap", gap:8 }}>
+            <div style={{ fontSize:10, color:"#3a2c18" }}>
+              {"Copyright © 2026 kobayashi-taku0. All rights reserved."}
+            </div>
+            <div style={{ fontSize:10, color:"#3a2c18" }}>
+              {"Powered by React · Claude AI"}
+            </div>
+          </div>
+        </div>
+      </footer>
+
     </div>
   );
 }
