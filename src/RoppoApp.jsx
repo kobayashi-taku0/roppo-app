@@ -1801,7 +1801,7 @@ export default function RoppoApp() {
                       {"\u7b2c"}
                     </span>
                     <input ref={inpRef} type="text" inputMode="numeric" value={inp}
-                      placeholder={"\u6761\u6587\u756a\u53f7\uff08\u4f8b: 1\uff09"}
+                      placeholder={""}
                       onChange={function(e) { setInp(e.target.value); }}
                       onKeyDown={function(e) {
                         if (e.key === "Enter") doSearch(law, inp);
@@ -1831,7 +1831,7 @@ export default function RoppoApp() {
                     borderRadius:8, padding:"0 12px", marginBottom:10 }}>
                     <span style={{ color:"#8a7a60", fontSize:13, flexShrink:0 }}>{"kw"}</span>
                     <input type="text" value={kw}
-                      placeholder={"keyword search..."}
+                      placeholder={""}
                       onChange={function(e) { setKw(e.target.value); }}
                       style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0,
                         fontFamily:"JaMincho,MS PMincho,MS P\u660e\u671d,MS Mincho,MS \u660e\u671d,Hiragino Mincho ProN,Hiragino Mincho Pro,Yu Mincho,YuMincho,Georgia,serif" }} />
