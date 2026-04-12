@@ -1104,14 +1104,20 @@ var PROGRESS_KEY = "roppo_progress";
 var MEMO_KEY     = "roppo_memos";
 
 function storageGet(key) {
-  return window.storage.get(key).then(function(r) {
-    return r ? JSON.parse(r.value) : {};
-  }).catch(function() { return {}; });
+  return new Promise(function(resolve) {
+    try {
+      var val = localStorage.getItem(key);
+      resolve(val ? JSON.parse(val) : {});
+    } catch(e) { resolve({}); }
+  });
 }
 function storageSet(key, data) {
-  return window.storage.set(key, JSON.stringify(data)).then(function() {
-    return true;
-  }).catch(function() { return false; });
+  return new Promise(function(resolve) {
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+      resolve(true);
+    } catch(e) { resolve(false); }
+  });
 }
 
 
