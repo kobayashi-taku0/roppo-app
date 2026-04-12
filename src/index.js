@@ -1,6 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import RoppoApp from './RoppoApp';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import RoppoApp from './RoppoApp.jsx'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RoppoApp />);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RoppoApp />
+)
