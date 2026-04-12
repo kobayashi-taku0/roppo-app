@@ -1190,7 +1190,12 @@ var APP_CSS_PARTS = [
   ".rl-row:hover{background:rgba(180,140,80,.07)!important;}",
   ".rl-tab{cursor:pointer;border:none;transition:all .15s;font-family:inherit;}",
   "input,textarea{background:transparent;border:none;outline:none;" +
-    "font-family:JaMincho,'MS PMincho','MS P明朝','MS Mincho','MS 明朝','Hiragino Mincho Pro','Hiragino Mincho ProN','Yu Mincho',YuMincho,Georgia,serif;color:#e8e0d0;width:100%;}",
+    "font-family:JaMincho,'MS PMincho','MS P明朝','MS Mincho','MS 明朝','Hiragino Mincho Pro','Hiragino Mincho ProN','Yu Mincho',YuMincho,Georgia,serif;color:#e8e0d0;width:100%;}" +
+    "input::placeholder,textarea::placeholder{" +
+    "font-family:JaMincho,'MS PMincho','MS P明朝'," +
+    "'MS Mincho','MS 明朝'," +
+    "'Hiragino Mincho Pro','Hiragino Mincho ProN'," +
+    "'Yu Mincho',YuMincho,Georgia,serif!important;}",
   "@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}",
   ".fade{animation:fadein .28s ease forwards;}",
   "@media(max-width:600px){.hd-sub{display:none}}"
@@ -1826,7 +1831,7 @@ export default function RoppoApp() {
                     borderRadius:8, padding:"0 12px", marginBottom:10 }}>
                     <span style={{ color:"#8a7a60", fontSize:13, flexShrink:0 }}>{"kw"}</span>
                     <input type="text" value={kw}
-                      placeholder={"\u30ad\u30fc\u30ef\u30fc\u30c9\u691c\u7d22\uff08\u4fe1\u7fa9\u5247\u3001\u9519\u8aa4\u306a\u3069\uff09"}
+                      placeholder={"keyword search..."}
                       onChange={function(e) { setKw(e.target.value); }}
                       style={{ flex:1, padding:"10px 4px", fontSize:14, minWidth:0,
                         fontFamily:"JaMincho,MS PMincho,MS P\u660e\u671d,MS Mincho,MS \u660e\u671d,Hiragino Mincho ProN,Hiragino Mincho Pro,Yu Mincho,YuMincho,Georgia,serif" }} />
